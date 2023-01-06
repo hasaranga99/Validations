@@ -1,3 +1,7 @@
+
+import com.sun.glass.events.KeyEvent;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -55,9 +59,19 @@ public class Validations extends javax.swing.JFrame {
         jLabel2.setText("Name");
 
         jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton1.setText("Validate Name");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -212,6 +226,27 @@ public class Validations extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+//        String name = jTextField1.getText();
+//        if(name.){
+//            
+//        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        // TODO add your handling code here:
+        char letter = evt.getKeyChar();
+        if(Character.isLetter(letter) | evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode() == KeyEvent.VK_PERIOD | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK){
+            jTextField1.setEditable(true);
+        }else{
+            jTextField1.setEditable(false);
+            JOptionPane.showMessageDialog(this,"Please Enter Alphebetic or space, Backspace, Dot only.", "ERROR!", JOptionPane.ERROR_MESSAGE);
+            jTextField1.setText(null);
+            jTextField1.grabFocus();
+        }
+    }//GEN-LAST:event_jTextField1KeyReleased
 
     /**
      * @param args the command line arguments
