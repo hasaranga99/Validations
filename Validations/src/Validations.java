@@ -78,11 +78,21 @@ public class Validations extends javax.swing.JFrame {
         jLabel3.setText("Contact No");
 
         jTextField2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField2KeyReleased(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton2.setText("Validate Name");
 
         jTextField3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField3KeyReleased(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -92,6 +102,11 @@ public class Validations extends javax.swing.JFrame {
         jButton3.setText("Validate Name");
 
         jTextField4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField4KeyReleased(evt);
+            }
+        });
 
         jButton4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton4.setText("Validate Name");
@@ -105,6 +120,11 @@ public class Validations extends javax.swing.JFrame {
         jLabel6.setText("Age");
 
         jTextField5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField5KeyReleased(evt);
+            }
+        });
 
         jButton5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton5.setText("Validate Name");
@@ -113,6 +133,11 @@ public class Validations extends javax.swing.JFrame {
         jButton6.setText("Validate Name");
 
         jTextField6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField6KeyReleased(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -126,6 +151,11 @@ public class Validations extends javax.swing.JFrame {
         jLabel8.setText("NIC NEW");
 
         jTextField7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField7KeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -238,7 +268,7 @@ public class Validations extends javax.swing.JFrame {
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
         // TODO add your handling code here:
         char letter = evt.getKeyChar();
-        if(Character.isLetter(letter) | evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode() == KeyEvent.VK_PERIOD | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK){
+        if(Character.isLetter(letter) | evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode() == KeyEvent.VK_PERIOD | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK | evt.getKeyCode()== KeyEvent.VK_ENTER){
             jTextField1.setEditable(true);
         }else{
             jTextField1.setEditable(false);
@@ -247,6 +277,85 @@ public class Validations extends javax.swing.JFrame {
             jTextField1.grabFocus();
         }
     }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
+        // TODO add your handling code here:
+        char number = evt.getKeyChar();
+        if(Character.isDigit(number)| evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK | evt.getKeyCode()== KeyEvent.VK_EQUALS | evt.getKeyCode()== KeyEvent.VK_PLUS | evt.getKeyCode()== KeyEvent.VK_MINUS | evt.getKeyCode()== KeyEvent.VK_ENTER)  {
+            jTextField2.setEditable(true);
+        }else{
+            jTextField2.setEditable(false);
+            JOptionPane.showMessageDialog(this,"Please Enter Numeric or space, Backspace, minus only.", "ERROR!", JOptionPane.ERROR_MESSAGE);
+            jTextField2.setText(null);
+            jTextField2.grabFocus();
+        }
+    }//GEN-LAST:event_jTextField2KeyReleased
+
+    private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
+        // TODO add your handling code here:
+        char charc = evt.getKeyChar();
+        if(Character.isDigit(charc) | Character.isLetter(charc)| Character.isLowerCase(charc) | evt.getKeyCode()== KeyEvent.VK_BACKSPACE | evt.getKeyCode()== KeyEvent.VK_MINUS |evt.getKeyCode()== KeyEvent.VK_SHIFT |evt.getKeyCode()== KeyEvent.VK_2 |evt.getKeyCode()== KeyEvent.VK_PERIOD |evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode()== KeyEvent.VK_ENTER){ 
+            jTextField3.setEditable(true);
+        }else{
+            jTextField3.setEditable(false);
+            JOptionPane.showMessageDialog(this,"PLease Enter Valid Characters only","ERROR",JOptionPane.ERROR_MESSAGE);
+            jTextField3.setText(null);
+            jTextField3.grabFocus();
+            
+        }
+    }//GEN-LAST:event_jTextField3KeyReleased
+
+    private void jTextField4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyReleased
+        // TODO add your handling code here:
+         char letter = evt.getKeyChar();
+        if(Character.isLetter(letter) | evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode() == KeyEvent.VK_PERIOD | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK | evt.getKeyCode()== KeyEvent.VK_ENTER){
+            jTextField4.setEditable(true);
+        }else{
+            jTextField4.setEditable(false);
+            JOptionPane.showMessageDialog(this,"Please Enter Valid details.", "ERROR!", JOptionPane.ERROR_MESSAGE);
+            jTextField4.setText(null);
+            jTextField4.grabFocus();
+        }
+    }//GEN-LAST:event_jTextField4KeyReleased
+
+    private void jTextField5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyReleased
+        // TODO add your handling code here:
+        char number = evt.getKeyChar();
+        if(Character.isDigit(number)| evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_ENTER)  {
+            jTextField5.setEditable(true);
+        }else{
+            jTextField5.setEditable(false);
+            JOptionPane.showMessageDialog(this,"Please Enter Valid Details.", "ERROR!", JOptionPane.ERROR_MESSAGE);
+            jTextField5.setText(null);
+            jTextField5.grabFocus();
+        }
+    }//GEN-LAST:event_jTextField5KeyReleased
+
+    private void jTextField6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyReleased
+        // TODO add your handling code here:
+        char number = evt.getKeyChar();
+        if(Character.isDigit(number)| evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_ENTER | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK | evt.getKeyCode()== KeyEvent.VK_V)  {
+            jTextField6.setEditable(true);
+        }else{
+            jTextField6.setEditable(false);
+            JOptionPane.showMessageDialog(this,"Please Enter Valid Details.", "ERROR!", JOptionPane.ERROR_MESSAGE);
+            jTextField6.setText(null);
+            jTextField6.grabFocus();
+        }
+    }//GEN-LAST:event_jTextField6KeyReleased
+
+    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
+        // TODO add your handling code here:
+        char number = evt.getKeyChar();
+        if(Character.isDigit(number)| evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_ENTER | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK)  {
+            jTextField7.setEditable(true);
+        }else{
+            jTextField7.setEditable(false);
+            JOptionPane.showMessageDialog(this,"Please Enter Valid Details.", "ERROR!", JOptionPane.ERROR_MESSAGE);
+            jTextField7.setText(null);
+            jTextField7.grabFocus();
+        }
+    }//GEN-LAST:event_jTextField7KeyReleased
 
     /**
      * @param args the command line arguments
