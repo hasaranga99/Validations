@@ -86,6 +86,11 @@ public class Validations extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton2.setText("Validate Name");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jTextField3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -100,6 +105,11 @@ public class Validations extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton3.setText("Validate Name");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jTextField4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -110,6 +120,11 @@ public class Validations extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton4.setText("Validate Name");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -128,11 +143,26 @@ public class Validations extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton5.setText("Validate Name");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton6.setText("Validate Name");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jTextField6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
         jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField6KeyReleased(evt);
@@ -145,6 +175,11 @@ public class Validations extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton7.setText("Validate Name");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -257,18 +292,10 @@ public class Validations extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-//        String name = jTextField1.getText();
-//        if(name.){
-//            
-//        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
         // TODO add your handling code here:
         char letter = evt.getKeyChar();
-        if(Character.isLetter(letter) | evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode() == KeyEvent.VK_PERIOD | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK | evt.getKeyCode()== KeyEvent.VK_ENTER){
+        if(Character.isLetter(letter) | evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode() == KeyEvent.VK_PERIOD | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK | evt.getKeyCode()== KeyEvent.VK_ENTER | evt.getKeyCode()== KeyEvent.VK_PLUS){
             jTextField1.setEditable(true);
         }else{
             jTextField1.setEditable(false);
@@ -308,7 +335,7 @@ public class Validations extends javax.swing.JFrame {
     private void jTextField4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyReleased
         // TODO add your handling code here:
          char letter = evt.getKeyChar();
-        if(Character.isLetter(letter) | evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode() == KeyEvent.VK_PERIOD | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK | evt.getKeyCode()== KeyEvent.VK_ENTER){
+        if(Character.isLetter(letter) |  evt.getKeyCode()== KeyEvent.VK_SPACE | evt.getKeyCode() == KeyEvent.VK_BACKSPACE | evt.getKeyCode() == KeyEvent.VK_PERIOD | evt.getKeyCode()== KeyEvent.VK_SHIFT | evt.getKeyCode()== KeyEvent.VK_CAPS_LOCK | evt.getKeyCode()== KeyEvent.VK_ENTER){
             jTextField4.setEditable(true);
         }else{
             jTextField4.setEditable(false);
@@ -356,6 +383,88 @@ public class Validations extends javax.swing.JFrame {
             jTextField7.grabFocus();
         }
     }//GEN-LAST:event_jTextField7KeyReleased
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        if(jTextField7.getText().trim().matches("^[0-9]{12}$")){
+            JOptionPane.showMessageDialog(this,"NIC is Valid!","SUCCESS!",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this,"NIC is Invalid!, Please Type 12 Character Number! ","ERROR",JOptionPane.ERROR_MESSAGE);
+            jTextField7.setText(null);
+            jTextField7.grabFocus();
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+         if(jTextField6.getText().trim().matches("^[0-9]{9}[Vv]$")){
+            JOptionPane.showMessageDialog(this,"NIC is Valid!","SUCCESS!",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this,"NIC is Invalid!, Please Enter valid OLD NIC   (123456789V) details! ","ERROR",JOptionPane.ERROR_MESSAGE);
+            jTextField6.setText(null);
+            jTextField6.grabFocus();
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        String a = jTextField5.getText();
+        int b = a.length();
+             if(b==1 | b==2 | b==3){
+            JOptionPane.showMessageDialog(this,"SUCCESS!","SUCCESS!",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this,"Age is Invalid!, Please Enter valid Age ","ERROR",JOptionPane.ERROR_MESSAGE);
+            jTextField5.setText(null);
+            jTextField5.grabFocus();
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        if(1<2){
+            JOptionPane.showMessageDialog(this,"Thnak you!","Success!",JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        if(jTextField3.getText().contains("@") && jTextField3.getText().contains(".")){
+            
+            JOptionPane.showMessageDialog(this,"Email is vlid!","Success!",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this,"Email is Invalid!, Please Enter Contain @ & . on your email ","ERROR!",JOptionPane.ERROR_MESSAGE);
+            jTextField5.setText(null);
+            jTextField5.grabFocus();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String a = jTextField2.getText();
+        int b = a.length();
+        
+        if(b>8 && b<13){
+            JOptionPane.showMessageDialog(this,"Contact No is valid!","Success!",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+             JOptionPane.showMessageDialog(this,"Contact No is Invalid!, Please Type Only length of 9-12 Digits","ERROR!",JOptionPane.ERROR_MESSAGE);
+            jTextField2.setText(null);
+            jTextField2.grabFocus();
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+                
+                if(0<1){
+                        JOptionPane.showMessageDialog(this,"Name is ok!","Success!",JOptionPane.INFORMATION_MESSAGE);
+
+                    }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
